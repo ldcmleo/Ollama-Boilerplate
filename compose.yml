@@ -1,0 +1,9 @@
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    volumes:
+      - "./volume:/root/.ollama"
+      - "./Makefile:/app/Makefile"
+    ports:
+      - "11434:11434"
